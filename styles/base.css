@@ -1,0 +1,12 @@
+body {
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+  font-family: var(--font-family-flex);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
