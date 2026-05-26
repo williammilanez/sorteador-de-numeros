@@ -19,12 +19,7 @@
     <!-- Navbar: logo + nome -->
     <nav class="navbar">
       <div class="logo">
-        <div class="logo-icon" aria-hidden="true">
-          <span class="logo-dot"></span>
-          <span class="logo-dot"></span>
-          <span class="logo-dot"></span>
-          <span class="logo-dot"></span>
-        </div>
+        <img src="assets/icons/logo.svg" alt="Numbers" class="logo-icon" />
         <span class="logo-text">NUMBERS</span>
       </div>
     </nav>
@@ -41,7 +36,13 @@
 
           <div class="questions">
             <div class="item">
-              <div class="item-icon" aria-hidden="true">?</div>
+              <div class="item-icon">
+                <img
+                  src="assets/icons/speech-bubble.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
               <div class="item-body">
                 <h3>Como funciona o sorteador de números?</h3>
                 <p>
@@ -52,7 +53,13 @@
             </div>
 
             <div class="item">
-              <div class="item-icon" aria-hidden="true">?</div>
+              <div class="item-icon">
+                <img
+                  src="assets/icons/speech-bubble.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
               <div class="item-body">
                 <h3>Posso escolher o intervalo dos números?</h3>
                 <p>
@@ -114,7 +121,12 @@
           <div class="button-go">
             <button id="btn-sortear" type="button">
               <span class="label-text">Sortear</span>
-              <span class="arrow" aria-hidden="true">→</span>
+              <img
+                src="assets/icons/arrow-forward.svg"
+                alt=""
+                aria-hidden="true"
+                class="arrow"
+              />
             </button>
           </div>
         </section>
@@ -134,10 +146,16 @@
 
           <div class="acoes">
             <button class="button-again" id="btn-novamente" type="button">
-              ↺ Sortear novamente
+              <img src="assets/icons/refresh.svg" alt="" aria-hidden="true" />
+              <span>Sortear novamente</span>
             </button>
             <button class="button-voltar" id="btn-voltar" type="button">
-              ← Voltar ao início
+              <img
+                src="assets/icons/arrow-back.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Voltar ao início</span>
             </button>
           </div>
         </section>
