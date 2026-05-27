@@ -1,0 +1,36 @@
+.screen {
+  flex: 1;
+  padding: var(--spacing-m) 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.badge {
+  font: var(--font-overline);
+  text-transform: uppercase;
+  background: linear-gradient(to right, var(--gradient-content));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container h1 {
+  font: var(--font-display-large);
+  text-transform: uppercase;
+  color: var(--content-primary);
+  margin-top: var(--spacing-s);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
