@@ -26,7 +26,7 @@
     </nav>
 
     <main>
-      <section class="screen" id="screen-form">
+      <div class="screen">
         <div class="container">
           <section class="content">
             <div class="header-info">
@@ -71,96 +71,100 @@
             </div>
           </section>
 
-          <form class="form">
-            <div class="form__header">
-              <h2>Quero sortear:</h2>
-              <p>
-                Defina o intervalo e a quantidade de números, clique em
-                "Sortear" e veja os resultados na tela. É rápido e fácil!
-              </p>
-            </div>
+          <div class="cards-area">
+            <section id="screen-form">
+              <form class="form">
+                <div class="form__header">
+                  <h2>Quero sortear:</h2>
+                  <p>
+                    Defina o intervalo e a quantidade de números, clique em
+                    "Sortear" e veja os resultados na tela. É rápido e fácil!
+                  </p>
+                </div>
 
-            <div class="form__body">
-              <div class="form__fields">
-                <div class="number-field">
-                  <label for="quantidade">Números</label>
-                  <input
-                    type="number"
-                    id="quantidade"
-                    min="1"
-                    placeholder="2"
-                  />
+                <div class="form__body">
+                  <div class="form__fields">
+                    <div class="number-field">
+                      <label for="quantidade">Números</label>
+                      <input
+                        type="number"
+                        id="quantidade"
+                        min="1"
+                        placeholder="2"
+                      />
+                    </div>
+                    <div class="number-field">
+                      <label for="minimo">De</label>
+                      <input type="number" id="minimo" placeholder="1" />
+                    </div>
+                    <div class="number-field">
+                      <label for="maximo">Até</label>
+                      <input type="number" id="maximo" placeholder="100" />
+                    </div>
+                  </div>
+
+                  <label class="option-toggle">
+                    <input type="checkbox" id="nao-repetir" />
+                    <span class="toggle-slider"></span>
+                    <span>Não repetir número</span>
+                  </label>
+
+                  <p
+                    id="mensagem-erro"
+                    class="mensagem-erro"
+                    role="alert"
+                    aria-live="polite"
+                  ></p>
                 </div>
-                <div class="number-field">
-                  <label for="minimo">De</label>
-                  <input type="number" id="minimo" placeholder="1" />
+
+                <div class="form__actions">
+                  <button id="btn-sortear" type="button">
+                    <span class="label-text">Sortear</span>
+                    <img
+                      src="assets/icons/arrow-forward.svg"
+                      alt=""
+                      aria-hidden="true"
+                      class="arrow"
+                    />
+                  </button>
                 </div>
-                <div class="number-field">
-                  <label for="maximo">Até</label>
-                  <input type="number" id="maximo" placeholder="100" />
+              </form>
+            </section>
+
+            <section class="hidden" id="screen-resultado">
+              <div class="result">
+                <h2>Resultado do sorteio</h2>
+                <p class="resultado-label" id="resultado-label">1º resultado</p>
+
+                <div
+                  class="result__numbers"
+                  id="result-numbers"
+                  aria-live="polite"
+                ></div>
+
+                <div class="acoes">
+                  <button class="button-again" id="btn-novamente" type="button">
+                    <img
+                      src="assets/icons/refresh.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <span>Sortear novamente</span>
+                  </button>
+                  <button class="button-voltar" id="btn-voltar" type="button">
+                    <img
+                      src="assets/icons/arrow-back.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <span>Voltar ao início</span>
+                  </button>
                 </div>
               </div>
-
-              <label class="option-toggle">
-                <input type="checkbox" id="nao-repetir" />
-
-                <span class="toggle-slider"></span>
-
-                <span>Não repetir número</span>
-              </label>
-
-              <p
-                id="mensagem-erro"
-                class="mensagem-erro"
-                role="alert"
-                aria-live="polite"
-              ></p>
-            </div>
-
-            <div class="form__actions">
-              <button id="btn-sortear" type="button">
-                <span class="label-text">Sortear</span>
-                <img
-                  src="assets/icons/arrow-forward.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="arrow"
-                />
-              </button>
-            </div>
-          </form>
+            </section>
+          </div>
         </div>
-      </section>
-
-      <section class="screen hidden" id="screen-resultado">
-        <div class="container">
-          <section class="result">
-            <h2>Resultado do sorteio</h2>
-            <p class="resultado-label" id="resultado-label">1º resultado</p>
-
-            <div
-              class="result__numbers"
-              id="result-numbers"
-              aria-live="polite"
-            ></div>
-
-            <div class="acoes">
-              <button class="button-again" id="btn-novamente" type="button">
-                <img src="assets/icons/refresh.svg" alt="" aria-hidden="true" />
-                <span>Sortear novamente</span>
-              </button>
-              <button class="button-voltar" id="btn-voltar" type="button">
-                <img
-                  src="assets/icons/arrow-back.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <span>Voltar ao início</span>
-              </button>
-            </div>
-          </section>
-        </div>
-      </section>
+      </div>
     </main>
 
     <script src="scripts/main.js"></script>

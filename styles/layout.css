@@ -1,8 +1,8 @@
 .screen {
   flex: 1;
-  padding: var(--spacing-m) 120px;
+  padding: var(--spacing-xl) 120px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
 }
@@ -37,9 +37,9 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--spacing-l);
-  align-self: center;
+  align-self: flex-start;
 }
 
 .header-info {
@@ -86,4 +86,11 @@
 .item-body p {
   font: var(--paragraph-small);
   color: var(--content-secondary);
+}
+
+.cards-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 480px;
 }
