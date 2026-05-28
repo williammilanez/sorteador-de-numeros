@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    <!-- Navbar: logo + nome -->
     <nav class="navbar">
       <div class="logo">
         <img src="assets/icons/logo.svg" alt="Numbers" class="logo-icon" />
@@ -25,10 +24,8 @@
     </nav>
 
     <main>
-      <!-- Tela 1: Formulário -->
       <section class="screen" id="screen-form">
         <div class="container">
-          <!-- Lado esquerdo: Content -->
           <section class="content">
             <div class="header-info">
               <span class="badge">Online - gratuito</span>
@@ -72,12 +69,11 @@
             </div>
           </section>
 
-          <!-- Lado direito: Form -->
           <form class="form">
             <div class="form__header">
               <h2>Quero sortear:</h2>
               <p>
-                defina o intervalo e a quantidade de números, clique em
+                Defina o intervalo e a quantidade de números, clique em
                 "Sortear" e veja os resultados na tela. É rápido e fácil!
               </p>
             </div>
@@ -85,20 +81,20 @@
             <div class="form__body">
               <div class="form__fields">
                 <div class="number-field">
-                  <label for="quantidade">números</label>
+                  <label for="quantidade">Números</label>
                   <input
                     type="number"
                     id="quantidade"
                     min="1"
-                    placeholder="5"
+                    placeholder="2"
                   />
                 </div>
                 <div class="number-field">
-                  <label for="minimo">Número mínimo</label>
+                  <label for="minimo">De</label>
                   <input type="number" id="minimo" placeholder="1" />
                 </div>
                 <div class="number-field">
-                  <label for="maximo">Número máximo</label>
+                  <label for="maximo">Até</label>
                   <input type="number" id="maximo" placeholder="100" />
                 </div>
               </div>
@@ -118,7 +114,6 @@
                 aria-live="polite"
               ></p>
             </div>
-            <!-- /.form__body -->
 
             <div class="form__actions">
               <button id="btn-sortear" type="button">
@@ -135,16 +130,17 @@
         </div>
       </section>
 
-      <!-- Tela 2: Resultado -->
       <section class="screen hidden" id="screen-resultado">
         <div class="container">
           <section class="result">
             <h2>Resultado do sorteio</h2>
             <p class="resultado-label" id="resultado-label">1º resultado</p>
 
-            <div class="result__numbers" id="result-numbers" aria-live="polite">
-              <!-- números sorteados aparecem aqui via JS -->
-            </div>
+            <div
+              class="result__numbers"
+              id="result-numbers"
+              aria-live="polite"
+            ></div>
 
             <div class="acoes">
               <button class="button-again" id="btn-novamente" type="button">

@@ -40,8 +40,9 @@
   --paragraph-large: 500 16px/1.5 var(--font-family-flex);
   --paragraph-medium: 500 14px/1.5 var(--font-family-flex);
   --paragraph-small: 500 12px/1.5 var(--font-family-flex);
-  --label-medium: 700 20px/1.5 var(--font-family-flex);
-  --label-small: 700 16px/1.5 var(--font-family-flex);
+  --label-large: 700 20px/1.5 var(--font-family-flex);
+  --label-medium: 700 16px/1.5 var(--font-family-flex);
+  --label-small: 700 12px/1.5 var(--font-family-flex);
 
   /* Spacing */
   --spacing-xxs: 4px;

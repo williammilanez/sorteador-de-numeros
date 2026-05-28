@@ -19,6 +19,6 @@
 .logo-text {
   font: var(--font-display-extra-small);
   color: var(--content-primary);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.005em;
   text-transform: uppercase;
 }

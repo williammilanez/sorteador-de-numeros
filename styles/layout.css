@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-s);
   width: 100%;
 }
 
@@ -33,4 +33,5 @@
   margin-top: var(--spacing-s);
   word-break: keep-all;
   overflow-wrap: normal;
+  letter-spacing: 0.005em;
 }
