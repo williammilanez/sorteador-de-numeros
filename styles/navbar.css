@@ -1,8 +1,10 @@
 .navbar {
-  padding: var(--spacing-l) 120px;
+  padding-top: var(--spacing-l);
+  padding-left: 120px;
+  padding-right: 120px;
   display: flex;
   align-items: center;
-  margin-top: var(--spacing-l);
+  margin-top: var(--spacing-s);
 }
 
 .logo {
