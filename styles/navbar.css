@@ -1,10 +1,16 @@
 .navbar {
-  padding-top: var(--spacing-l);
-  padding-left: 120px;
-  padding-right: 120px;
+  padding: var(--spacing-l) 120px 0;
   display: flex;
   align-items: center;
   margin-top: var(--spacing-s);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
