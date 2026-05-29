@@ -21,6 +21,7 @@
 .form__header p {
   font: var(--paragraph-large);
   color: var(--content-secondary);
+  text-align: justify;
 }
 
 .form__body {

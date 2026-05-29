@@ -25,7 +25,7 @@
   background-clip: text;
 }
 
-.container h1 {
+.hero-title {
   font: var(--font-display-small);
   text-transform: uppercase;
   color: var(--content-primary);
@@ -96,6 +96,7 @@
 .item-body p {
   font: var(--paragraph-small);
   color: var(--content-secondary);
+  text-align: justify;
 }
 
 @media (min-width: 768px) {
@@ -108,7 +109,7 @@
     gap: var(--spacing-xl);
   }
 
-  .container h1 {
+  .hero-title {
     font: var(--font-display-medium);
   }
 
@@ -147,7 +148,7 @@
     padding: var(--spacing-xl) 120px;
   }
 
-  .container h1 {
+  .hero-title {
     font: var(--font-display-large);
   }
 }
