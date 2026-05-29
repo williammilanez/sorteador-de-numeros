@@ -112,3 +112,9 @@
     transform: scale(1);
   }
 }
+
+.button-again:focus-visible,
+.button-voltar:focus-visible {
+  outline: 2px solid var(--content-brand);
+  outline-offset: 3px;
+}
