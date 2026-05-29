@@ -75,12 +75,7 @@
   opacity: 0.6;
 }
 
-/* ============================================================
-   NUMBER CHIP — Cada número sorteado
-   ============================================================ */
-
 .number-chip {
-  /* Estrutura */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -88,16 +83,13 @@
   aspect-ratio: 1;
   padding: var(--spacing-xs);
 
-  /* Visual */
   background-color: var(--background-tertiary);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
 
-  /* Tipografia */
   font: var(--font-display-small);
   font-family: var(--font-family-mono);
 
-  /* Gradiente no texto */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,7 +99,6 @@
     var(--accent-blue)
   );
 
-  /* Transição de entrada */
   animation: chip-enter 0.3s ease forwards;
 }
 
