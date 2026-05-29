@@ -34,15 +34,13 @@
   letter-spacing: 0.005em;
 }
 
-.content {
-  display: contents;
-}
-
 .header-info {
   order: 1;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxs);
+  text-align: center;
+  align-items: center;
 }
 
 .cards-area {
@@ -52,11 +50,18 @@
   justify-content: center;
 }
 
-.questions {
+.content {
   order: 3;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-m);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  padding: 0 var(--spacing-l) var(--spacing-l);
 }
 
 .item {
@@ -107,25 +112,27 @@
     font: var(--font-display-medium);
   }
 
+  .header-info {
+    order: 0;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    align-items: flex-start;
+  }
+
   .content {
-    display: flex;
-    flex-direction: column;
+    order: 0;
+    grid-column: 1;
+    grid-row: 2;
     justify-content: flex-start;
     gap: var(--spacing-l);
     align-self: flex-start;
-    order: 0;
-  }
-
-  .header-info {
-    order: 0;
-  }
-
-  .questions {
-    order: 0;
   }
 
   .cards-area {
     order: 0;
+    grid-column: 2;
+    grid-row: 1 / 3;
     min-height: 480px;
   }
 
