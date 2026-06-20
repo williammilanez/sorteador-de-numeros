@@ -173,6 +173,12 @@
   outline-offset: 3px;
 }
 
+.mensagem-erro {
+  min-height: 24px;
+  color: var(--accent-red);
+  font: var(--paragraph-small);
+}
+
 @media (min-width: 768px) {
   .form__fields {
     grid-template-columns: repeat(3, 1fr);

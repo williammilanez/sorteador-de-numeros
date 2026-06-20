@@ -1,5 +1,5 @@
-import { obterDadosFormulario } from "./sorteio.js";
-import { elementos } from "./ui.js";
+import { obterDadosFormulario, validarDados } from "./sorteio.js";
+import { elementos, limparErro, mostrarErro } from "./ui.js";
 
 function iniciarAplicacao() {
   elementos.btnSortear.addEventListener("click", handleSortear);
@@ -14,10 +14,26 @@ function iniciarAplicacao() {
 }
 
 function handleSortear() {
+  limparErro();
+
   const dados = obterDadosFormulario(elementos);
 
-  console.log("Dados capturados:");
-  console.log(dados);
+  const erro = validarDados(dados);
+
+  if (erro) {
+    mostrarErro(erro);
+    return;
+  }
+
+  const dadosTratados = {
+    quantidade: Number(dados.quantidade),
+    minimo: Number(dados.minimo),
+    maximo: Number(dados.maximo),
+    naoRepetir: dados.naoRepetir,
+  };
+
+  console.log("Dados válidos:");
+  console.log(dadosTratados);
 }
 
 iniciarAplicacao();

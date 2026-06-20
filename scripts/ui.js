@@ -18,3 +18,11 @@ export const elementos = {
   resultadoContainer: document.querySelector("#result-numbers"),
   resultadoLabel: document.querySelector("#resultado-label"),
 };
+
+export function mostrarErro(mensagem) {
+  elementos.mensagemErro.textContent = mensagem;
+}
+
+export function limparErro() {
+  elementos.mensagemErro.textContent = "";
+}
