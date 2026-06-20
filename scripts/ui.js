@@ -66,3 +66,38 @@ export function mostrarSucesso(mensagem) {
 export function limparSucesso() {
   elementos.mensagemSucesso.textContent = "";
 }
+
+let estadoLoading = false;
+
+export function iniciarLoadingSortear() {
+  estadoLoading = true;
+
+  const btns = [elementos.btnSortear, elementos.btnNovamente];
+
+  btns.forEach((btn) => {
+    btn.disabled = true;
+
+    const label = btn.querySelector(".label-text");
+
+    if (label) {
+      label.dataset.original = label.textContent;
+      label.textContent = "Sorteando...";
+    }
+  });
+}
+
+export function finalizarLoadingSortear() {
+  estadoLoading = false;
+
+  const btns = [elementos.btnSortear, elementos.btnNovamente];
+
+  btns.forEach((btn) => {
+    btn.disabled = false;
+
+    const label = btn.querySelector(".label-text");
+
+    if (label && label.dataset.original) {
+      label.textContent = label.dataset.original;
+    }
+  });
+}

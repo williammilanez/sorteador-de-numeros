@@ -6,6 +6,8 @@ import {
 import {
   atualizarLabelResultado,
   elementos,
+  finalizarLoadingSortear,
+  iniciarLoadingSortear,
   limparErro,
   limparSucesso,
   mostrarErro,
@@ -59,14 +61,7 @@ function handleSortear() {
 }
 
 async function executarSorteio(dadosTratados) {
-  elementos.btnSortear.disabled = true;
-
-  const textoOriginal =
-    elementos.btnSortear.querySelector(".label-text").textContent;
-
-  elementos.btnSortear.querySelector(".label-text").textContent =
-    "Sorteando...";
-
+  iniciarLoadingSortear();
   limparSucesso();
 
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -83,9 +78,7 @@ async function executarSorteio(dadosTratados) {
 
   mostrarSucesso("Sorteio realizado com sucesso!");
 
-  elementos.btnSortear.disabled = false;
-
-  elementos.btnSortear.querySelector(".label-text").textContent = textoOriginal;
+  finalizarLoadingSortear();
 }
 
 iniciarAplicacao();
