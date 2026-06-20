@@ -118,3 +118,9 @@
   outline: 2px solid var(--content-brand);
   outline-offset: 3px;
 }
+
+.mensagem-sucesso {
+  min-height: 24px;
+  font: var(--paragraph-medium);
+  color: var(--accent-green);
+}

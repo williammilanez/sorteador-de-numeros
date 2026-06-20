@@ -17,6 +17,7 @@ export const elementos = {
 
   resultadoContainer: document.querySelector("#result-numbers"),
   resultadoLabel: document.querySelector("#resultado-label"),
+  mensagemSucesso: document.querySelector("#mensagem-sucesso"),
 };
 
 export function mostrarErro(mensagem) {
@@ -56,4 +57,12 @@ export function renderizarResultados(numeros) {
 
 export function atualizarLabelResultado(contador) {
   elementos.resultadoLabel.textContent = `${contador}º resultado`;
+}
+
+export function mostrarSucesso(mensagem) {
+  elementos.mensagemSucesso.textContent = mensagem;
+}
+
+export function limparSucesso() {
+  elementos.mensagemSucesso.textContent = "";
 }

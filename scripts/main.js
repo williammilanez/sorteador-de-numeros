@@ -7,7 +7,9 @@ import {
   atualizarLabelResultado,
   elementos,
   limparErro,
+  limparSucesso,
   mostrarErro,
+  mostrarSucesso,
   mostrarTelaFormulario,
   mostrarTelaResultado,
   renderizarResultados,
@@ -26,7 +28,6 @@ function iniciarAplicacao() {
 
   elementos.btnNovamente.addEventListener("click", () => {
     if (!ultimoSorteio) return;
-
     executarSorteio(ultimoSorteio);
   });
 }
@@ -57,7 +58,19 @@ function handleSortear() {
   executarSorteio(dadosTratados);
 }
 
-function executarSorteio(dadosTratados) {
+async function executarSorteio(dadosTratados) {
+  elementos.btnSortear.disabled = true;
+
+  const textoOriginal =
+    elementos.btnSortear.querySelector(".label-text").textContent;
+
+  elementos.btnSortear.querySelector(".label-text").textContent =
+    "Sorteando...";
+
+  limparSucesso();
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   const numerosSorteados = realizarSorteio(dadosTratados);
 
   contadorSorteios++;
@@ -67,6 +80,12 @@ function executarSorteio(dadosTratados) {
   renderizarResultados(numerosSorteados);
 
   mostrarTelaResultado();
+
+  mostrarSucesso("Sorteio realizado com sucesso!");
+
+  elementos.btnSortear.disabled = false;
+
+  elementos.btnSortear.querySelector(".label-text").textContent = textoOriginal;
 }
 
 iniciarAplicacao();
