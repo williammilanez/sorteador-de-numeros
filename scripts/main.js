@@ -3,13 +3,23 @@ import {
   realizarSorteio,
   validarDados,
 } from "./sorteio.js";
-import { elementos, limparErro, mostrarErro } from "./ui.js";
+import {
+  atualizarLabelResultado,
+  elementos,
+  limparErro,
+  mostrarErro,
+  mostrarTelaFormulario,
+  mostrarTelaResultado,
+  renderizarResultados,
+} from "./ui.js";
+
+let contadorSorteios = 0;
 
 function iniciarAplicacao() {
   elementos.btnSortear.addEventListener("click", handleSortear);
 
   elementos.btnVoltar.addEventListener("click", () => {
-    console.log("Voltar");
+    mostrarTelaFormulario();
   });
 
   elementos.btnNovamente.addEventListener("click", () => {
@@ -38,8 +48,13 @@ function handleSortear() {
 
   const numerosSorteados = realizarSorteio(dadosTratados);
 
-  console.log("Números sorteados:");
-  console.log(numerosSorteados);
+  contadorSorteios++;
+
+  atualizarLabelResultado(contadorSorteios);
+
+  renderizarResultados(numerosSorteados);
+
+  mostrarTelaResultado();
 }
 
 iniciarAplicacao();

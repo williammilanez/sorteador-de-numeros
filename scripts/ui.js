@@ -26,3 +26,34 @@ export function mostrarErro(mensagem) {
 export function limparErro() {
   elementos.mensagemErro.textContent = "";
 }
+
+export function mostrarTelaResultado() {
+  elementos.screenForm.classList.add("hidden");
+  elementos.screenResultado.classList.remove("hidden");
+}
+
+export function mostrarTelaFormulario() {
+  elementos.screenResultado.classList.add("hidden");
+  elementos.screenForm.classList.remove("hidden");
+}
+
+export function limparResultados() {
+  elementos.resultadoContainer.innerHTML = "";
+}
+
+export function renderizarResultados(numeros) {
+  limparResultados();
+
+  numeros.forEach((numero) => {
+    const chip = document.createElement("div");
+
+    chip.classList.add("number-chip");
+    chip.textContent = numero;
+
+    elementos.resultadoContainer.appendChild(chip);
+  });
+}
+
+export function atualizarLabelResultado(contador) {
+  elementos.resultadoLabel.textContent = `${contador}º resultado`;
+}
