@@ -1,4 +1,8 @@
-import { obterDadosFormulario, validarDados } from "./sorteio.js";
+import {
+  obterDadosFormulario,
+  realizarSorteio,
+  validarDados,
+} from "./sorteio.js";
 import { elementos, limparErro, mostrarErro } from "./ui.js";
 
 function iniciarAplicacao() {
@@ -32,8 +36,10 @@ function handleSortear() {
     naoRepetir: dados.naoRepetir,
   };
 
-  console.log("Dados válidos:");
-  console.log(dadosTratados);
+  const numerosSorteados = realizarSorteio(dadosTratados);
+
+  console.log("Números sorteados:");
+  console.log(numerosSorteados);
 }
 
 iniciarAplicacao();
