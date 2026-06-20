@@ -14,16 +14,20 @@ import {
 } from "./ui.js";
 
 let contadorSorteios = 0;
+let ultimoSorteio = null;
 
 function iniciarAplicacao() {
   elementos.btnSortear.addEventListener("click", handleSortear);
 
   elementos.btnVoltar.addEventListener("click", () => {
+    contadorSorteios = 0;
     mostrarTelaFormulario();
   });
 
   elementos.btnNovamente.addEventListener("click", () => {
-    console.log("Sortear novamente");
+    if (!ultimoSorteio) return;
+
+    executarSorteio(ultimoSorteio);
   });
 }
 
@@ -46,6 +50,14 @@ function handleSortear() {
     naoRepetir: dados.naoRepetir,
   };
 
+  ultimoSorteio = dadosTratados;
+
+  contadorSorteios = 0;
+
+  executarSorteio(dadosTratados);
+}
+
+function executarSorteio(dadosTratados) {
   const numerosSorteados = realizarSorteio(dadosTratados);
 
   contadorSorteios++;
