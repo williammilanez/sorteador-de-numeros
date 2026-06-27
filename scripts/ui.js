@@ -78,10 +78,16 @@ export function iniciarLoadingSortear() {
     btn.disabled = true;
 
     const label = btn.querySelector(".label-text");
+    const icon = btn.querySelector("img");
 
     if (label) {
       label.dataset.original = label.textContent;
       label.textContent = "Sorteando...";
+    }
+
+    if (icon) {
+      icon.dataset.originalDisplay = icon.style.display;
+      icon.style.display = "none";
     }
   });
 }
@@ -95,9 +101,14 @@ export function finalizarLoadingSortear() {
     btn.disabled = false;
 
     const label = btn.querySelector(".label-text");
+    const icon = btn.querySelector("img");
 
     if (label && label.dataset.original) {
       label.textContent = label.dataset.original;
+    }
+
+    if (icon) {
+      icon.style.display = icon.dataset.originalDisplay || "";
     }
   });
 }
