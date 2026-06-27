@@ -74,3 +74,17 @@ export function realizarSorteio(dados) {
 
   return sortearComRepeticao(quantidade, minimo, maximo);
 }
+
+export function salvarUltimoSorteio(dados) {
+  localStorage.setItem("ultimo-sorteio", JSON.stringify(dados));
+}
+
+export function carregarUltimoSorteio() {
+  const dados = localStorage.getItem("ultimo-sorteio");
+
+  if (!dados) {
+    return null;
+  }
+
+  return JSON.parse(dados);
+}

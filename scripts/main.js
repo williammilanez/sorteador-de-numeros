@@ -1,6 +1,8 @@
 import {
+  carregarUltimoSorteio,
   obterDadosFormulario,
   realizarSorteio,
+  salvarUltimoSorteio,
   validarDados,
 } from "./sorteio.js";
 import {
@@ -20,6 +22,19 @@ import {
 let contadorSorteios = 0;
 let ultimoSorteio = null;
 
+function restaurarUltimoSorteio() {
+  const dados = carregarUltimoSorteio();
+
+  if (!dados) return;
+
+  elementos.quantidade.value = dados.quantidade;
+  elementos.minimo.value = dados.minimo;
+  elementos.maximo.value = dados.maximo;
+  elementos.naoRepetir.checked = dados.naoRepetir;
+
+  ultimoSorteio = dados;
+}
+
 function iniciarAplicacao() {
   elementos.btnSortear.addEventListener("click", handleSortear);
 
@@ -32,6 +47,8 @@ function iniciarAplicacao() {
     if (!ultimoSorteio) return;
     executarSorteio(ultimoSorteio);
   });
+
+  restaurarUltimoSorteio();
 }
 
 function handleSortear() {
@@ -54,6 +71,8 @@ function handleSortear() {
   };
 
   ultimoSorteio = dadosTratados;
+
+  salvarUltimoSorteio(dadosTratados);
 
   contadorSorteios = 0;
 
