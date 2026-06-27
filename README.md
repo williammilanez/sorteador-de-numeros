@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/markup-html-E34F26" />
   <img src="https://img.shields.io/badge/styling-css-1572B6" />
   <img src="https://img.shields.io/badge/responsive-yes-success" />
+  <img src="https://img.shields.io/badge/deploy-vercel-000000" />
   <img src="https://img.shields.io/badge/status-completed-success" />
 </p>
 
@@ -39,6 +40,14 @@ O projeto foi desenvolvido com foco em:
 - Validação de dados
 - Responsividade
 - Boas práticas de desenvolvimento
+
+---
+
+## 🌐 Deploy
+
+A aplicação está disponível em:
+
+**https://sorteador-de-numeros-azure-six.vercel.app/**
 
 ---
 
@@ -104,15 +113,11 @@ sorteador-de-numeros/
 git clone https://github.com/williammilanez/sorteador-de-numeros.git
 ```
 
----
-
 ### Acesse a pasta
 
 ```bash
 cd sorteador-de-numeros
 ```
-
----
 
 ### Execute o projeto
 
