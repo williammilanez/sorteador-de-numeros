@@ -45,10 +45,12 @@ export function limparResultados() {
 export function renderizarResultados(numeros) {
   limparResultados();
 
-  numeros.forEach((numero) => {
+  numeros.forEach((numero, index) => {
     const chip = document.createElement("div");
 
     chip.classList.add("number-chip");
+
+    chip.style.animationDelay = `${index * 0.1}s`;
     chip.textContent = numero;
 
     elementos.resultadoContainer.appendChild(chip);
