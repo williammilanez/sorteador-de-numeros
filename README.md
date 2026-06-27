@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="./assets/icons/logo.svg" width="340px" alt="Sorteador de Números" />
+  <img src="./assets/icons/logo.svg" width="50" alt="Sorteador de Números" />
 </p>
+
+<h1 align="center">Sorteador de Números</h1>
 
 <p align="center">
   Aplicação web para sorteio de números aleatórios com ou sem repetição.
